@@ -1,9 +1,10 @@
+import os
 import sqlite3
-from config import DATABASE_NAME
+
+DATABASE_NAME = "/tmp/nexampay.db" if os.getenv("RENDER") else "nexampay.db"
 
 def connect_db():
     return sqlite3.connect(DATABASE_NAME)
-
 def create_tables():
     conn = connect_db()
     cursor = conn.cursor()
