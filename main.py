@@ -12,6 +12,6 @@ def start():
 
     print("Base de données prête.")
     print("Backend NexamPay démarré avec succès.")
-
 if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
     start()
